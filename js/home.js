@@ -1,18 +1,63 @@
-document.getElementById('addMoney-btn').addEventListener('click', function(e){
+document
+  .getElementById("add-money-submit-btn")
+  .addEventListener("click", function (e) {
     e.preventDefault();
 
-    const bankName = document.getElementById('bankName').value;
-    const accountNumberBtn = parseInt(document.getElementById('account-number-btn').value);
-    const addAmountBtn = parseInt(document.getElementById('add-amount-btn').value);
-    const addPinBtn = parseInt(document.getElementById('pin-number-btn').value);
+    const bankName = document.getElementById("bankName").value;
+    const accountNumberBtn = parseInt(
+      document.getElementById("account-number-btn").value
+    );
+    const addAmountInputBtn = parseInt(
+      document.getElementById("add-money-input-field").value
+    );
+    const addPinBtn = parseInt(document.getElementById("pin-number-btn").value);
 
-    // Add Money Btn
+    // Add Money submit Btn
 
-    const availableBalance = parseInt(document.getElementById('availableBalance').innerText)
+    const availableBalance = parseInt(
+      document.getElementById("availableBalance").innerText
+    );
+
+    const totalCurrentBalance = availableBalance + addAmountInputBtn;
+
+    document.getElementById("availableBalance").innerText = totalCurrentBalance;
+
+    document.getElementById("add-money-input-field").value = "";
+  });
+
+// Add Money feature Button with Toggle ////
+
+document
+  .getElementById("add-money-feature-button")
+  .addEventListener("click", function () {
+    document.getElementById("cash-out-feature-section").style.display = "none";
+    document.getElementById("add-money-feature-section").style.display =
+      "block";
+  });
+
+document
+  .getElementById("cash-out-feature-button")
+  .addEventListener("click", function () {
+    document.getElementById("add-money-feature-section").style.display = "none";
+    document.getElementById("cash-out-feature-section").style.display = "block";
+  });
+
+// Cash Out Section //
+
+document.getElementById('cash-out-submit-btn').addEventListener('click', function(e){
+    e.preventDefault();
     
-    const totalCurrentBalance = availableBalance + addAmountBtn;
+    const inputBalanceCatch = parseInt(document.getElementById('cash-out-input-field').value);
 
-    document.getElementById('availableBalance').innerText = totalCurrentBalance;
+    const crrentBalance = parseInt(document.getElementById("availableBalance").innerText);
 
-   document.getElementById('add-amount-btn').value ='';
+
+    const afterCashOutBalance = crrentBalance - inputBalanceCatch;
+    
+
+   document.getElementById("availableBalance").innerText = afterCashOutBalance;
+
+   document.getElementById('cash-out-input-field').value ='';
+
+
 })
