@@ -33,7 +33,8 @@ document
     document.getElementById("cash-out-feature-section").style.display = "none";
     document.getElementById('transfer-money-feature-section').style.display = "none";
     document.getElementById('get-bonus-feature-section').style.display = "none";
-    document.getElementById('pay-bill-feature-section').style.display = "none"
+    document.getElementById('pay-bill-feature-section').style.display = "none";
+    document.getElementById('transaction-history-feature-section').style.display = "none";
     document.getElementById("add-money-feature-section").style.display = "block";
   });
 
@@ -45,7 +46,8 @@ document
     document.getElementById("add-money-feature-section").style.display = "none";
     document.getElementById('transfer-money-feature-section').style.display = "none";
     document.getElementById('get-bonus-feature-section').style.display = "none";
-    document.getElementById('pay-bill-feature-section').style.display = "none"
+    document.getElementById('pay-bill-feature-section').style.display = "none";
+    document.getElementById('transaction-history-feature-section').style.display = "none";
     document.getElementById("cash-out-feature-section").style.display = "block";
   });
 
@@ -96,7 +98,8 @@ document.getElementById('trasfer-money-freature-page').addEventListener('click',
     document.getElementById("cash-out-feature-section").style.display = "none";
     document.getElementById("add-money-feature-section").style.display = "none";
     document.getElementById('get-bonus-feature-section').style.display = "none";
-    document.getElementById('pay-bill-feature-section').style.display = "none"
+    document.getElementById('pay-bill-feature-section').style.display = "none";
+    document.getElementById('transaction-history-feature-section').style.display = "none";
     document.getElementById('transfer-money-feature-section').style.display = "block";
 })
 
@@ -108,8 +111,9 @@ document.getElementById('get-bonus-feature-site').addEventListener('click', func
     document.getElementById("cash-out-feature-section").style.display = "none";
     document.getElementById("add-money-feature-section").style.display = "none";
     document.getElementById('transfer-money-feature-section').style.display = "none";
-    document.getElementById('pay-bill-feature-section').style.display = "none"
-    document.getElementById('get-bonus-feature-section').style.display = "block"
+    document.getElementById('pay-bill-feature-section').style.display = "none";
+    document.getElementById('transaction-history-feature-section').style.display = "none";
+    document.getElementById('get-bonus-feature-section').style.display = "block";
 })
 
 // Pay Bill site Toggle ///
@@ -119,6 +123,19 @@ document.getElementById('pay-bill-feature-site').addEventListener('click', funct
     document.getElementById("cash-out-feature-section").style.display = "none";
     document.getElementById("add-money-feature-section").style.display = "none";
     document.getElementById('transfer-money-feature-section').style.display = "none";
-    document.getElementById('get-bonus-feature-section').style.display = "none"
-    document.getElementById('pay-bill-feature-section').style.display = "block"
+    document.getElementById('get-bonus-feature-section').style.display = "none";
+    document.getElementById('transaction-history-feature-section').style.display = "none";
+    document.getElementById('pay-bill-feature-section').style.display = "block";
+})
+// Transaction Histry site Toggle ///
+
+document.getElementById('transaction-history-feature-site').addEventListener('click', function(){
+    
+    document.getElementById("cash-out-feature-section").style.display = "none";
+    document.getElementById("add-money-feature-section").style.display = "none";
+    document.getElementById('transfer-money-feature-section').style.display = "none";
+    document.getElementById('get-bonus-feature-section').style.display = "none";
+    document.getElementById('pay-bill-feature-section').style.display = "none";
+    document.getElementById('transaction-history-feature-section').style.display = "block";
+    
 })
