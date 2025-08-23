@@ -74,14 +74,14 @@
             <h1>Cashout</h1>
           </div>
           <div
-            id="trasfer-money-button"
+            id="trasfer-money-freature-page"
             class="trasferMoney cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center"
           >
             <img class="mx-auto" src="./assets/money1.png" alt="" />
             <h1>Trasfer Money</h1>
           </div>
           <div
-            id="get-bonus-button"
+            id="get-bonus-feature-site"
             class="getBonus cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
           >
             <img class="mx-auto" src="./assets/bonus1.png" alt="" />
@@ -182,6 +182,111 @@
                 id="cash-out-submit-btn"
                 class="btn w-full rounded-full p-7 mt-3 bg-[#0874F2] text-white font-medium text-xl">
                 Withdraw Money
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Tranfer Money feature Section -->
+         <section id="transfer-money-feature-section" class="hidden">
+          <h1 class="text-xl font-bold ml-4 px-3 my-5">Tranfer Money</h1>
+          <div class=" w-[90%] mx-auto bg-white rounded-2xl py-5">
+            <form class="px-3">
+              <label for="">User Account Number</label> <br />
+              <input
+                id="trnsfr-user-account-input"
+                type="text"
+                placeholder="Enter 11 digit number"
+                class="bg-[#f4f5f7] h-14 w-full rounded-full my-3 px-3 outline-slate-300 border-slate-300"
+              />
+              <label for="">Amount</label> <br />
+              <input
+                id="transfer-amount-input-field"
+                type="text"
+                placeholder="Enter amount to trnsfer"
+                class="bg-[#f4f5f7] h-14 w-full rounded-full my-3 px-3 outline-slate-300 border-slate-300"
+              />
+              <label for="">Pin Number</label> <br />
+              <input
+                id="transfer-pin-number-input"
+                type="text"
+                placeholder="Enter 4 digit pin number"
+                class="bg-[#f4f5f7] h-14 w-full rounded-full my-3 px-3 outline-slate-300 border-slate-300"
+              />
+              <button
+                id="transfer-submit-button"
+                class="btn w-full rounded-full p-7 mt-3 bg-[#0874F2] text-white font-medium text-xl">
+                Send Now
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Get Bonus Feature Section -->
+         
+         <section id="get-bonus-feature-section" class="hidden">
+          <h1 class="text-xl font-bold ml-4 px-3 my-5">Get Bonus</h1>
+          <div class=" w-[90%] mx-auto bg-white rounded-2xl py-5">
+            <form class="px-3">
+              <label for="">Enter Bonus Coupon</label> <br />
+              <input
+                id="bonus-coupon-input"
+                type="text"
+                placeholder="Enter your coupon"
+                class="bg-[#f4f5f7] h-14 w-full rounded-full my-3 px-3 outline-slate-300 border-slate-300"
+              />
+              <button
+                id="get-bonus-submit-button"
+                class="btn w-full rounded-full p-7 mt-3 bg-[#0874F2] text-white font-medium text-xl">
+                Get Bonus
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Pay Bill Feature -->
+         <section id="pay-bill-feature-section"  class="hidden">
+          <h1 class="text-xl font-bold ml-4 px-3 my-5">Pay Bill</h1>
+          <div class=" w-[90%] mx-auto bg-white rounded-2xl py-5">
+            <form class="px-3">
+              <label class="" for="">Select To Pay</label> <br />
+              <select
+                id="bankName"
+                class="select h-14 w-full rounded-full my-3 bg-[#f4f5f7] outline-slate-300 border-slate-300"
+              >
+                <option>Select Bank</option>
+                <option>IFIC Bank PLC</option>
+                <option>Agrani Bank PLC</option>
+                <option>Dutch Bangla Bank PLC</option>
+                <option>IBL PLC</option>
+                <option>Sonali Bank PLC</option>
+              </select>
+              <label for="">Bank Account Number</label> <br />
+              <input
+                id="account-number-btn"
+                type="text"
+                placeholder="Enter 11 digit account number"
+                class="bg-[#f4f5f7] h-14 w-full rounded-full my-3 px-3 outline-slate-300 border-slate-300"
+              />
+              <label for="">Amount to Add</label> <br />
+              <input
+                id="add-money-input-field"
+                type="text"
+                placeholder="Add Amount to withdraw"
+                class="bg-[#f4f5f7] h-14 w-full rounded-full my-3 px-3 outline-slate-300 border-slate-300"
+              />
+              <label for="">Pin Number</label> <br />
+              <input
+                id="pin-number-btn"
+                type="text"
+                placeholder="Enter 4 digit pin number"
+                class="bg-[#f4f5f7] h-14 w-full rounded-full my-3 px-3 outline-slate-300 border-slate-300"
+              />
+              <button
+                id="pay-now-submit-btn"
+                class="btn w-full rounded-full p-7 mt-3 bg-[#0874F2] text-white font-medium text-xl"
+              >
+                Pay Now
               </button>
             </form>
           </div>

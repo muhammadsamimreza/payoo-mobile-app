@@ -31,14 +31,19 @@ document
   .getElementById("add-money-feature-button")
   .addEventListener("click", function () {
     document.getElementById("cash-out-feature-section").style.display = "none";
-    document.getElementById("add-money-feature-section").style.display =
-      "block";
+    document.getElementById('transfer-money-feature-section').style.display = "none";
+    document.getElementById('get-bonus-feature-section').style.display = "none";
+    document.getElementById("add-money-feature-section").style.display = "block";
   });
 
+
+//   Cash Out Toggle //
 document
   .getElementById("cash-out-feature-button")
   .addEventListener("click", function () {
     document.getElementById("add-money-feature-section").style.display = "none";
+    document.getElementById('transfer-money-feature-section').style.display = "none";
+    document.getElementById('get-bonus-feature-section').style.display = "none";
     document.getElementById("cash-out-feature-section").style.display = "block";
   });
 
@@ -60,4 +65,45 @@ document.getElementById('cash-out-submit-btn').addEventListener('click', functio
    document.getElementById('cash-out-input-field').value ='';
 
 
+})
+
+
+// Transfer Section and Send Now Button ///
+
+document.getElementById('transfer-submit-button').addEventListener('click', function(e){
+    e.preventDefault();
+
+    const currentBalanceStill = parseInt(document.getElementById("availableBalance").innerText);
+
+    const transferAmountInputField = parseInt(document.getElementById('transfer-amount-input-field').value);
+
+    const afterTransferBalance = currentBalanceStill - transferAmountInputField;
+
+    document.getElementById("availableBalance").innerText = afterTransferBalance;
+
+    document.getElementById('transfer-amount-input-field').value = '';
+
+
+
+})
+
+// Toggle and Show Transfer feature ///
+
+document.getElementById('trasfer-money-freature-page').addEventListener('click', function(){
+    
+    document.getElementById("cash-out-feature-section").style.display = "none";
+    document.getElementById("add-money-feature-section").style.display = "none";
+    document.getElementById('get-bonus-feature-section').style.display = "none";
+    document.getElementById('transfer-money-feature-section').style.display = "block";
+})
+
+
+// Get Bonus site Toggle ///
+
+document.getElementById('get-bonus-feature-site').addEventListener('click', function(){
+    
+    document.getElementById("cash-out-feature-section").style.display = "none";
+    document.getElementById("add-money-feature-section").style.display = "none";
+    document.getElementById('transfer-money-feature-section').style.display = "none";
+    document.getElementById('get-bonus-feature-section').style.display = "block"
 })
