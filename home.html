@@ -52,7 +52,7 @@
               <i
                 class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#666768]"
               ></i>
-              <span class="text-[#08080880]">Log Out</span>
+              <span id="logout-btn" class="text-[#08080880]">Log Out</span>
             </button>
           </div>
         </div>
@@ -67,42 +67,42 @@
         <div class="card-container my-6 grid grid-cols-3 gap-3 px-4">
           <div
             id="add-money-feature-button"
-            class="addMoney cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
+            class="btnCss addMoney cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
           >
             <img class="mx-auto" src="./assets/wallet1.png" alt="" />
             <h1>Add Money</h1>
           </div>
           <div
             id="cash-out-feature-button"
-            class="Cashout cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
+            class="btnCss Cashout cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
           >
             <img class="mx-auto" src="./assets/send1.png" alt="" />
             <h1>Cashout</h1>
           </div>
           <div
             id="trasfer-money-freature-page"
-            class="trasferMoney cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center"
+            class="btnCss trasferMoney cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center"
           >
             <img class="mx-auto" src="./assets/money1.png" alt="" />
             <h1>Trasfer Money</h1>
           </div>
           <div
             id="get-bonus-feature-site"
-            class="getBonus cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
+            class="btnCss getBonus cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
           >
             <img class="mx-auto" src="./assets/bonus1.png" alt="" />
             <h1>Get Bonus</h1>
           </div>
           <div
             id="pay-bill-feature-site"
-            class="payBill cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
+            class="btnCss payBill cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
           >
             <img class="mx-auto" src="./assets/purse1.png" alt="" />
             <h1>Pay Bill</h1>
           </div>
           <div
             id="transaction-history-feature-site"
-            class="Transactions cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
+            class="btnCss Transactions cursor-pointer border border-[#0808081a] rounded-lg flex flex-col justify-center items-center text-center py-6"
           >
             <img class="mx-auto" src="./assets/transaction1.png" alt="" />
             <h1>Transactions</h1>
@@ -112,8 +112,8 @@
 
       <div class="All-forms">
         <!-- Add Money feature section -->
-        <section id="add-money-feature-section" class="interface-form">
-          <h1 class="text-xl font-bold ml-4 px-3 my-5">Add Money</h1>
+        <section id="add-money-feature-section" class="interface-form hidden">
+          <h1 id="add-money-title" class="text-xl font-bold ml-4 px-3 my-5">Add Money</h1>
           <div class="Addmoney-form w-[90%] mx-auto bg-white rounded-2xl py-5">
             <form class="px-3">
               <label class="" for="">Select A Bank</label> <br />
@@ -160,8 +160,8 @@
         </section>
 
         <!-- Cash Out Feature Section -->
-        <section id="cash-out-feature-section" class="interface-form">
-          <h1 class="text-xl font-bold ml-4 px-3 my-5">Cash Out</h1>
+        <section id="cash-out-feature-section" class="interface-form hidden">
+          <h1 id="cash-out-title" class="text-xl font-bold ml-4 px-3 my-5">Cash Out</h1>
           <div class="Addmoney-form w-[90%] mx-auto bg-white rounded-2xl py-5">
             <form class="px-3">
               <label for="">Agent Number</label> <br />
@@ -196,8 +196,8 @@
         </section>
 
         <!-- Tranfer Money feature Section -->
-        <section id="transfer-money-feature-section" class="interface-form">
-          <h1 class="text-xl font-bold ml-4 px-3 my-5">Tranfer Money</h1>
+        <section id="transfer-money-feature-section" class="interface-form hidden">
+          <h1 id="transfer-money-title" class="text-xl font-bold ml-4 px-3 my-5">Tranfer Money</h1>
           <div class="w-[90%] mx-auto bg-white rounded-2xl py-5">
             <form class="px-3">
               <label for="">User Account Number</label> <br />
@@ -232,7 +232,7 @@
         </section>
 
         <!-- Get Bonus Feature Section -->
-        <section id="get-bonus-feature-section" class="interface-form">
+        <section id="get-bonus-feature-section" class="interface-form hidden">
           <h1 class="text-xl font-bold ml-4 px-3 my-5">Get Bonus</h1>
           <div class="w-[90%] mx-auto bg-white rounded-2xl py-5">
             <form class="px-3">
@@ -254,7 +254,7 @@
         </section>
 
         <!-- Pay Bill Feature -->
-        <section id="pay-bill-feature-section" class="interface-form">
+        <section id="pay-bill-feature-section" class="interface-form hidden">
           <h1 class="text-xl font-bold ml-4 px-3 my-5">Pay Bill</h1>
           <div class="w-[90%] mx-auto bg-white rounded-2xl py-5">
             <form class="px-3">
@@ -302,30 +302,15 @@
         </section>
 
         <!-- Transaction History freature section -->
-        <section id="transaction-history-feature-section" class="interface-form">
+        <section id="transaction-history-feature-section" class="interface-form hidden">
           <div class="flex justify-between items-center px-5 my-7">
             <h1 class=" text-[#080808e6] text-xl font-bold">
               Transaction History
             </h1>
             <p class="text-[#08080880] cursor-pointer hover:bg-[#dde0e5] hover:px-1 hover:rounded-lg ">View All</p>
           </div>
-          <div class="w-[90%] mx-auto bg-white rounded-2xl py-5 border-2 border-gray-200">
-            <div class="">
-              <div class="Transaction-Card flex justify-between items-center px-5">
-               <div class="Left-site-transaction flex gap-5">
-                <div class="w-14 rounded-full bg-[#f4f5f7] p-3">
-                 <img class="w-14" src="./assets/wallet1.png" alt="" />
-               </div>
-                <div>
-                  <h2 class="text-xl font-semibold text-[#080808b3]">Transactions</h2>
-                  <p class="text-[#080808b3]">Date:......</p>
-                </div>
-               </div>
-                <div class="dot text-2xl text-[#080808b3]">
-                  <i class="cursor-pointer fa-solid fa-ellipsis-vertical"></i>
-                </div>
-              </div>
-            </div>
+          <div id="interface-Data-Container">
+
           </div>
         </section>
       </div>
